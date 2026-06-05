@@ -195,7 +195,9 @@
         html, body { background-color: #0a2540; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; line-height: 1.6; }
         .container { width: 92%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { background-color: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.15); position: sticky; top: 0; width: 100%; z-index: 9999; padding: 12px 0; box-sizing: border-box; }
+        .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 10000; background-color: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.15); }
+        nav { background-color: #ffffff; width: 100%; padding: 12px 0; box-sizing: border-box; }
+        body { padding-top: 99px; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .logo-nav img { max-height: 75px; width: auto; display: block; }
         .nav-menu { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -244,39 +246,59 @@
         .maps-flex { display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
         .btn-map { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #ffffff; border: 1px solid #cbd5e0; border-radius: 6px; text-decoration: none; color: #1d3557; font-weight: bold; font-size: 0.95rem; }
         .reviews-box { background: #ffffff; padding: 50px 30px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 70px; color: #2b2d42; }
-        .reviews-box h2 { color: #1d3557; }
-        .scroll-container { display: flex; overflow-x: auto; gap: 25px; padding-bottom: 20px; scroll-snap-type: x mandatory; }
-        .card-review { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px; min-width: 300px; max-width: 300px; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: space-between; }
-        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .reviewer-name { font-weight: 700; color: #1d3557; font-size: 1rem; }
-        .review-stars { color: #ffb703; font-size: 1.1rem; }
-        .review-text { font-size: 0.9rem; color: #333333; font-style: italic; line-height: 1.5; margin: 0 0 15px; }
-        .btn-verify-review { display: inline-flex; align-items: center; font-size: 0.8rem; color: #00b4d8; text-decoration: none; font-weight: bold; }
+        .reviews-box h2 { color: #1d3557; margin: 0 0 8px; }
+        .reviews-score { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; padding: 16px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .reviews-score-value { font-size: 2.4rem; font-weight: 800; color: #1d3557; line-height: 1; }
+        .reviews-score-stars { color: #ffb703; font-size: 1.4rem; letter-spacing: 2px; }
+        .reviews-score-meta { color: #555; font-size: 0.95rem; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card-review { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px; }
+        .card-review.hidden-review { display: none; }
+        .reviews-grid.show-all .card-review.hidden-review { display: flex; }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 10px; }
+        .reviewer-name { font-weight: 700; color: #1d3557; font-size: 0.95rem; }
+        .review-stars { color: #ffb703; font-size: 1rem; white-space: nowrap; }
+        .review-text { font-size: 0.9rem; color: #333333; font-style: italic; line-height: 1.5; margin: 0; flex: 1; }
+        .reviews-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+        .btn-more-reviews { display: inline-flex; align-items: center; padding: 12px 24px; background: #1d3557; color: #ffffff; border: none; border-radius: 8px; font-weight: bold; font-size: 0.95rem; cursor: pointer; text-decoration: none; }
+        .btn-more-reviews:hover { background: #00b4d8; }
+        .btn-google-reviews { display: inline-flex; align-items: center; padding: 12px 24px; background: #ffffff; color: #1d3557; border: 2px solid #00b4d8; border-radius: 8px; font-weight: bold; font-size: 0.95rem; text-decoration: none; }
+        .btn-google-reviews:hover { background: #f0f9ff; }
         .faq-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(0,180,216,0.2); border-radius: 12px; padding: 35px; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto; }
         .faq-box h2 { color: #00b4d8; text-align: center; margin-top: 0; }
         .faq-item { margin-bottom: 18px; }
         .faq-item h3 { color: #ffffff; font-size: 1.05rem; margin: 0 0 6px; }
         .faq-item p { color: #f1f3f5; margin: 0; font-size: 0.95rem; }
-        .medical-disclaimer { text-align: center; font-size: 0.85rem; color: #cbd5e0; max-width: 800px; margin: 0 auto 40px; padding: 0 20px; }
-        footer { background-color: #1d3557; color: #ffffff; padding: 45px 0; font-size: 0.9rem; border-top: 4px solid #00b4d8; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 35px; }
-        .footer-col h4 { color: #00b4d8; margin: 0 0 15px; font-size: 1.1rem; }
-        .footer-col p { margin: 6px 0; color: #f1f3f5; }
-        .footer-logo-container { display: block; max-width: 90px; height: auto; margin-bottom: 15px; }
+        .courses-banner { text-align: center; padding: 35px 20px; border-top: 1px solid rgba(255,255,255,0.15); margin-top: 20px; }
+        .courses-banner p { font-size: 1.1rem; color: #ffffff; font-weight: 600; margin: 0; max-width: 700px; margin-left: auto; margin-right: auto; }
+        footer { background-color: #1d3557; color: #ffffff; padding: 40px 0 0; font-size: 0.9rem; border-top: 4px solid #00b4d8; }
+        .footer-main { display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 35px; }
+        .footer-brand { display: flex; align-items: flex-start; gap: 20px; flex: 1; min-width: 260px; }
+        .footer-logo-container { display: block; max-width: 90px; width: 90px; height: auto; flex-shrink: 0; }
+        .footer-brand-text h4 { color: #00b4d8; margin: 0 0 10px; font-size: 1.15rem; }
+        .footer-brand-text p { margin: 5px 0; color: #f1f3f5; line-height: 1.5; }
+        .footer-info { display: flex; gap: 50px; flex-wrap: wrap; flex: 2; min-width: 280px; }
+        .footer-col h4 { color: #00b4d8; margin: 0 0 12px; font-size: 1rem; }
+        .footer-col p { margin: 5px 0; color: #f1f3f5; line-height: 1.55; }
+        .footer-col a { color: #00b4d8; text-decoration: none; }
+        .medical-disclaimer { text-align: center; font-size: 0.8rem; color: #a8b8c8; margin: 0; padding: 18px 20px; background: rgba(0,0,0,0.15); border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.5; }
         .whatsapp-floating { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 99999; transition: transform 0.2s; }
         .whatsapp-floating:hover { transform: scale(1.1); }
         .whatsapp-floating svg { width: 34px; height: 34px; fill: #ffffff; }
         @media (max-width: 768px) {
+            body { padding-top: 130px; }
             .info-block { flex-direction: column; gap: 25px; }
             .hero h1 { font-size: 2rem; }
             .nav-item { margin-left: 0; }
             .nav-menu { justify-content: center; }
             .predictacore-table th, .predictacore-table td { padding: 12px; font-size: 0.9rem; }
+            .footer-main { flex-direction: column; gap: 28px; }
+            .footer-info { flex-direction: column; gap: 24px; }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav aria-label="Navegación principal">
             <div class="nav-container">
                 <div class="logo-nav">
@@ -400,22 +422,54 @@
 
             <section id="testimonios" class="reviews-box">
                 <h2>Esto dicen nuestros clientes</h2>
-                <div class="scroll-container">
+                <div class="reviews-score" aria-label="Calificación en Google: 4.8 de 5 estrellas, 84 reseñas">
+                    <div class="reviews-score-value">4.8</div>
+                    <div>
+                        <div class="reviews-score-stars" aria-hidden="true">★★★★★</div>
+                        <div class="reviews-score-meta">Basado en <strong>84 reseñas</strong> verificadas en Google</div>
+                    </div>
+                </div>
+                <div id="reviews-grid" class="reviews-grid">
                     <article class="card-review">
+                        <div class="review-header"><span class="reviewer-name">Alicia M.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"Excelente trato, muy profesionales y el tratamiento me dio muy buenos resultados."</blockquote>
+                    </article>
+                    <article class="card-review">
+                        <div class="review-header"><span class="reviewer-name">Fabiola H.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"Excelente servicio y equipos, sientes los beneficios desde la 1ra sesión."</blockquote>
+                    </article>
+                    <article class="card-review">
+                        <div class="review-header"><span class="reviewer-name">María Luisa S.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"Fue una bonita experiencia venir a la terapia de oxígeno."</blockquote>
+                    </article>
+                    <article class="card-review hidden-review">
                         <div class="review-header"><span class="reviewer-name">Carlos M.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
                         <blockquote class="review-text">"Excelente atención clínica, muy profesionales."</blockquote>
-                        <a href="https://www.google.com/maps/place/CAMARA+HIPERBARICA+OXYGENGDL/@20.6690983,-103.3716262,17z/data=!4m7!3m6!1s0x8428ab5d57095555:0x32376ead949e0ff7!8m2!3d20.6690983!4d-103.3716262!9m1!1b1!16s%2Fg%2F11sscvrdnr" target="_blank" rel="noopener" class="btn-verify-review">✓ Ver reseñas en Google</a>
                     </article>
-                    <article class="card-review">
+                    <article class="card-review hidden-review">
                         <div class="review-header"><span class="reviewer-name">Elena R.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
                         <blockquote class="review-text">"Infraestructura de alta calidad, muy seguros y limpios."</blockquote>
-                        <a href="https://www.google.com/maps/place/CAMARA+HIPERBARICA+OXYGENGDL/@20.6690983,-103.3716262,17z/data=!4m7!3m6!1s0x8428ab5d57095555:0x32376ead949e0ff7!8m2!3d20.6690983!4d-103.3716262!9m1!1b1!16s%2Fg%2F11sscvrdnr" target="_blank" rel="noopener" class="btn-verify-review">✓ Ver reseñas en Google</a>
                     </article>
-                    <article class="card-review">
+                    <article class="card-review hidden-review">
                         <div class="review-header"><span class="reviewer-name">Ricardo A.</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
                         <blockquote class="review-text">"Recuperación deportiva rápida, gran enfoque médico."</blockquote>
-                        <a href="https://www.google.com/maps/place/CAMARA+HIPERBARICA+OXYGENGDL/@20.6690983,-103.3716262,17z/data=!4m7!3m6!1s0x8428ab5d57095555:0x32376ead949e0ff7!8m2!3d20.6690983!4d-103.3716262!9m1!1b1!16s%2Fg%2F11sscvrdnr" target="_blank" rel="noopener" class="btn-verify-review">✓ Ver reseñas en Google</a>
                     </article>
+                    <article class="card-review hidden-review">
+                        <div class="review-header"><span class="reviewer-name">Janeth</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"La atención y cuidados son excelentes. La terapia me ayudó a mejorar increíblemente."</blockquote>
+                    </article>
+                    <article class="card-review hidden-review">
+                        <div class="review-header"><span class="reviewer-name">Addis</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"Descubrirles fue un acierto. La atención y la buena vibra se respiran en todo el lugar."</blockquote>
+                    </article>
+                    <article class="card-review hidden-review">
+                        <div class="review-header"><span class="reviewer-name">Paciente verificado</span><span class="review-stars" aria-label="5 estrellas">★★★★★</span></div>
+                        <blockquote class="review-text">"Muy recomendable para recuperación. Personal capacitado y ambiente muy seguro."</blockquote>
+                    </article>
+                </div>
+                <div class="reviews-actions">
+                    <button type="button" id="btn-show-more-reviews" class="btn-more-reviews">Ver más reseñas</button>
+                    <a href="https://www.google.com/maps/place/CAMARA+HIPERBARICA+OXYGENGDL/@20.6690983,-103.3716262,17z/data=!4m7!3m6!1s0x8428ab5d57095555:0x32376ead949e0ff7!8m2!3d20.6690983!4d-103.3716262!9m1!1b1!16s%2Fg%2F11sscvrdnr" target="_blank" rel="noopener" class="btn-google-reviews">Ver las 84 reseñas en Google</a>
                 </div>
             </section>
 
@@ -443,35 +497,52 @@
                 </div>
             </section>
 
-            <p class="medical-disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico, indicación ni seguimiento médico profesional.</p>
-
-            <div style="text-align:center;padding:40px 0;border-top:1px solid #ffffff33;margin-top:20px;">
-                <p style="font-size:1.2rem;color:#fff;font-weight:bold;">Impartimos cursos de capacitación de manejo y seguridad de cámara hiperbárica.</p>
+            <div class="courses-banner">
+                <p>Impartimos cursos de capacitación de manejo y seguridad de cámara hiperbárica.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
+        <div class="container footer-main">
+            <div class="footer-brand">
                 <img class="footer-logo-container" src="/assets/images/OXY-LOGO-02.png" alt="Logo OXYGENGDL" width="90" height="90">
-                <h4>OXYGENGDL</h4>
-                <p>© 2026 CÁMARA HIPERBÁRICA OXYGENGDL.</p>
+                <div class="footer-brand-text">
+                    <h4>OXYGENGDL</h4>
+                    <p>Cámara Hiperbárica · Oxigenoterapia en Guadalajara</p>
+                    <p>© 2026 CÁMARA HIPERBÁRICA OXYGENGDL</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Dirección</h4>
-                <p>C. Gral. San Martín 420, Col. Americana, Obrera, Guadalajara, Jal.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Horarios Clínicos</h4>
-                <p>L-V: 7:30 AM – 8:00 PM | S: 9:00 AM – 2:00 PM</p>
-                <p style="color:#00b4d8">Contacto: <a href="tel:+523328332686" style="color:#00b4d8;text-decoration:none">33 2833 2686</a></p>
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>Dirección</h4>
+                    <p>C. Gral. San Martín 420<br>Col. Americana, Obrera<br>44150 Guadalajara, Jal.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horarios y contacto</h4>
+                    <p>L-V: 7:30 AM – 8:00 PM</p>
+                    <p>Sáb: 9:00 AM – 2:00 PM</p>
+                    <p><a href="tel:+523328332686">33 2833 2686</a></p>
+                    <p><a href="https://wa.me/523328332686" target="_blank" rel="noopener">WhatsApp</a></p>
+                </div>
             </div>
         </div>
+        <p class="medical-disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico, indicación ni seguimiento médico profesional. Certificación IBUM y permiso COFEPRIS.</p>
     </footer>
 
     <a href="https://wa.me/523328332686" class="whatsapp-floating" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.843.002-2.63-1.023-5.101-2.886-6.968-1.863-1.867-4.343-2.895-6.977-2.896-5.442 0-9.867 4.414-9.87 9.844a9.747 9.747 0 0 0 1.512 5.111l-.993 3.624 3.726-.977zm11.213-7.391c-.29-.145-1.716-.848-1.976-.942-.26-.096-.45-.145-.64.145-.19.29-.73.942-.896 1.132-.16.19-.32.213-.61.068-1.404-.703-2.332-1.258-3.264-2.861-.249-.427.249-.396.713-1.32.079-.16.039-.301-.02-.446-.06-.145-.64-1.542-.876-2.112-.23-.553-.463-.477-.64-.486-.164-.008-.353-.01-.542-.01-.19 0-.498.07-.759.353-.26.29-1 .977-1 2.383s1.025 2.766 1.17 2.955c.143.19 2.015 3.076 4.883 4.312.684.294 1.218.469 1.634.601.688.219 1.314.188 1.81.114.552-.082 1.716-.701 1.956-1.377.24-.677.24-1.258.17-1.377-.07-.119-.26-.193-.55-.338z"/></svg>
     </a>
+    <script>
+    (function () {
+        var grid = document.getElementById('reviews-grid');
+        var btn = document.getElementById('btn-show-more-reviews');
+        if (!grid || !btn) return;
+        btn.addEventListener('click', function () {
+            grid.classList.add('show-all');
+            btn.style.display = 'none';
+        });
+    })();
+    </script>
 </body>
 </html>
