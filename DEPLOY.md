@@ -54,8 +54,24 @@ El sitio nuevo en `https://oxygengdl.com/` es técnicamente correcto, pero Googl
 ### C. Enviar sitemap
 
 1. Search Console → **Sitemaps**
-2. Agregar: `https://oxygengdl.com/sitemap.xml`
-3. Estado debe quedar **Correcto**
+2. Agregar solo: `sitemap.xml` (sin URL completa; GSC ya usa el dominio verificado)
+3. Estado debe quedar **Correcto** con 1 página descubierta
+
+#### Si dice "No se ha podido obtener"
+
+El sitemap responde bien en el navegador, pero Googlebot puede estar bloqueado por Cloudflare:
+
+1. **Cloudflare** → dominio `oxygengdl.com` → **Security** → **Events**
+   - Filtrar por User-Agent `Googlebot`
+   - Si aparece bloqueado (403, challenge, JS challenge) → ese es el problema
+2. **Desactivar Bot Fight Mode** (si está activo):
+   - Security → Settings → **Bot Fight Mode** → Off
+   - O crear regla WAF: si User-Agent contiene `Googlebot` → **Skip** / Allow
+3. En Search Console → Sitemaps → **eliminar** el sitemap fallido
+4. Esperar 5 minutos tras el deploy y **volver a enviar** `sitemap.xml`
+5. Probar en **Inspección de URLs**: pegar `https://oxygengdl.com/sitemap.xml` → **Probar URL publicada**
+
+> Nota: el redirect de `www` a raíz usa `//oxygengdl.com/` (sin `https:`). En Cloudflare → Rules, conviene corregirlo a `https://oxygengdl.com/$1` para evitar problemas con crawlers.
 
 ### D. Solicitar indexación de la página principal
 
