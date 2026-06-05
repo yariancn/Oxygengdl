@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cámara Hiperbárica OXYGENGDL | Oxigenoterapia Terapéutica Guadalajara</title>
-    <meta name="description" content="Cámara hiperbárica en Guadalajara, Jalisco. Oxigenoterapia certificada IBUM y COFEPRIS. Sesiones desde $750 MXN. General San Martín 420, Col. Americana. Agenda por WhatsApp al 33 2833 2686.">
+    <meta name="description" content="Cámara hiperbárica en Guadalajara, Jalisco. Oxigenoterapia hiperbárica certificada IBUM y COFEPRIS. Instalaciones clínicas seguras. Sesiones desde $750 MXN. General San Martín 420, Col. Americana. WhatsApp 33 2833 2686.">
+    <meta name="keywords" content="cámara hiperbárica Guadalajara, oxigenoterapia hiperbárica, terapia hiperbárica Jalisco, OXYGENGDL, cámara hiperbárica precio, oxígeno hiperbárico Guadalajara">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://oxygengdl.com/">
 
@@ -17,7 +18,9 @@
     <meta property="og:url" content="https://oxygengdl.com/">
     <meta property="og:title" content="Cámara Hiperbárica OXYGENGDL | Guadalajara">
     <meta property="og:description" content="Oxigenoterapia hiperbárica certificada en Guadalajara. Certificación IBUM y permiso COFEPRIS. Reserva tu cita por WhatsApp.">
-    <meta property="og:image" content="https://oxygengdl.com/assets/images/OXY-LOGO-02.png">
+    <meta property="og:image" content="https://oxygengdl.com/assets/images/instalacion-clinica-segura.jpg">
+    <meta property="og:image:alt" content="Instalaciones clínicas seguras de cámara hiperbárica OXYGENGDL en Guadalajara">
+    <meta name="twitter:image" content="https://oxygengdl.com/assets/images/instalacion-clinica-segura.jpg">
     <meta property="og:locale" content="es_MX">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cámara Hiperbárica OXYGENGDL | Guadalajara">
@@ -47,9 +50,25 @@
           "url": "https://oxygengdl.com/",
           "logo": "https://oxygengdl.com/assets/images/logo.png",
           "image": [
+            "https://oxygengdl.com/assets/images/instalacion-clinica-segura.jpg",
             "https://oxygengdl.com/assets/images/2024-07-31.jpg",
             "https://oxygengdl.com/assets/images/IMG-20240510-WA0014.jpg"
           ],
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://wa.me/523328332686?text=Hola,%20quiero%20agendar%20una%20cita%20de%20oxigenoterapia%20hiperbárica.",
+              "actionPlatform": [
+                "http://schema.org/MobileWebPlatform",
+                "http://schema.org/DesktopWebPlatform"
+              ]
+            },
+            "result": {
+              "@type": "Reservation",
+              "name": "Cita de oxigenoterapia hiperbárica"
+            }
+          },
           "description": "Clínica de oxigenoterapia hiperbárica en Guadalajara. Certificación internacional IBUM y permiso COFEPRIS.",
           "telephone": "+52-33-2833-2686",
           "priceRange": "$$",
@@ -141,6 +160,22 @@
                 "@type": "Answer",
                 "text": "Puedes agendar por WhatsApp al 33 2833 2686 o usar los botones de reserva en esta página."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "¿OXYGENGDL tiene certificación para cámara hiperbárica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Operamos con certificación internacional IBUM (International Board of Undersea Medicine) y permiso COFEPRIS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es la oxigenoterapia hiperbárica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es una terapia que combina presión atmosférica controlada y oxígeno para apoyar procesos de recuperación celular. En OXYGENGDL se aplica como tratamiento complementario en instalaciones clínicas seguras."
+              }
             }
           ]
         }
@@ -187,8 +222,9 @@
         .info-text { flex: 1; }
         .info-text h3 { color: #1d3557; font-size: 1.6rem; margin: 0 0 15px; }
         .info-text p { color: #333333; }
-        .info-image-container { flex: 1; display: flex; gap: 10px; }
-        .info-image-real { width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: block; }
+        .info-image-container { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .info-image-featured { grid-column: 1 / -1; width: 100%; height: 240px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: block; }
+        .info-image-real { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: block; }
         .price-container-text { margin: 0 auto 60px; max-width: 900px; padding: 0 10px; }
         .predictacore-table { width: 100%; border-collapse: collapse; margin-top: 15px; background-color: rgba(255, 255, 255, 0.04); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); }
         .predictacore-table th { background-color: #1d3557; color: #ffffff; padding: 16px 20px; font-weight: 700; text-align: left; font-size: 1.05rem; border-bottom: 2px solid #00b4d8; }
@@ -315,14 +351,15 @@
                 </article>
             </div>
 
-            <div class="info-block">
+            <div id="ambiente-clinico" class="info-block">
                 <div class="info-text">
                     <h3>Ambiente Clínico y Seguro</h3>
-                    <p>Nuestras cámaras brindan una atmósfera óptima de presurización. Estamos capacitados y certificados para ofrecer los protocolos más adecuados según cada caso, garantizando un entorno diseñado exclusivamente para la tranquilidad y seguridad de cada usuario.</p>
+                    <p>Nuestras cámaras hiperbáricas operan en instalaciones clínicas limpias, con protocolos certificados IBUM y permiso COFEPRIS. Brindamos una atmósfera óptima de presurización, con equipamiento profesional y un entorno diseñado para la tranquilidad y seguridad de cada paciente en Guadalajara.</p>
                 </div>
                 <div class="info-image-container">
-                    <img class="info-image-real" src="/assets/images/2024-07-31.jpg" alt="Instalaciones de cámara hiperbárica OXYGENGDL en Guadalajara" width="400" height="300" loading="lazy">
-                    <img class="info-image-real" src="/assets/images/IMG-20240510-WA0014.jpg" alt="Interior de cámara hiperbárica OXYGENGDL" width="400" height="300" loading="lazy">
+                    <img class="info-image-featured" src="/assets/images/instalacion-clinica-segura.jpg" alt="Instalaciones clínicas seguras con cámaras hiperbáricas OXYGENGDL en Guadalajara, Jalisco" width="800" height="480" loading="lazy">
+                    <img class="info-image-real" src="/assets/images/2024-07-31.jpg" alt="Sala de oxigenoterapia hiperbárica OXYGENGDL Guadalajara" width="400" height="300" loading="lazy">
+                    <img class="info-image-real" src="/assets/images/IMG-20240510-WA0014.jpg" alt="Cámara hiperbárica portátil en clínica OXYGENGDL" width="400" height="300" loading="lazy">
                 </div>
             </div>
 
@@ -385,6 +422,14 @@
                 <div class="faq-item">
                     <h3>¿Cómo agendo una cita?</h3>
                     <p>WhatsApp al <a href="https://wa.me/523328332686" style="color:#00b4d8">33 2833 2686</a> o botón Reservar Cita.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Tienen certificación IBUM y COFEPRIS?</h3>
+                    <p>Sí. Contamos con certificación internacional IBUM y permiso COFEPRIS para operación de cámara hiperbárica.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué es la oxigenoterapia hiperbárica?</h3>
+                    <p>Terapia con presión controlada y oxígeno que apoya la recuperación celular. Se aplica como tratamiento complementario en nuestro ambiente clínico seguro.</p>
                 </div>
             </section>
 
