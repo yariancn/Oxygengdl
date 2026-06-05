@@ -1,0 +1,6 @@
+/terapia-hiperbarica /#tratamientos 301
+/terapia-hiperbarica-y-paralisis-cerebral /#tratamientos 301
+/indicaciones /#tratamientos 301
+/diabetes /#tratamientos 301
+/about-me /#inicio 301
+/www/* https://oxygengdl.com/:splat 301

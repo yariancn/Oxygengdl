@@ -1,0 +1,26 @@
+# Nunca subir videos ni archivos pesados al sitio web
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.avi
+*.mkv
+*.dmg
+*.zip
+*.7z
+*.rar
+*.pdf
+*.ai
+*.tif
+*.tiff
+*.psd
+*.exe
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editor
+*.swp
+*~
