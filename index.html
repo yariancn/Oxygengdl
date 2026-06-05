@@ -271,16 +271,16 @@
         .faq-item p { color: #f1f3f5; margin: 0; font-size: 0.95rem; }
         .courses-banner { text-align: center; padding: 35px 20px; border-top: 1px solid rgba(255,255,255,0.15); margin-top: 20px; }
         .courses-banner p { font-size: 1.1rem; color: #ffffff; font-weight: 600; margin: 0; max-width: 700px; margin-left: auto; margin-right: auto; }
-        footer { background-color: #1d3557; color: #ffffff; padding: 40px 0 0; font-size: 0.9rem; border-top: 4px solid #00b4d8; }
-        .footer-main { display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 35px; }
-        .footer-brand { display: flex; align-items: flex-start; gap: 20px; flex: 1; min-width: 260px; }
-        .footer-logo-container { display: block; max-width: 90px; width: 90px; height: auto; flex-shrink: 0; }
-        .footer-brand-text h4 { color: #00b4d8; margin: 0 0 10px; font-size: 1.15rem; }
-        .footer-brand-text p { margin: 5px 0; color: #f1f3f5; line-height: 1.5; }
-        .footer-info { display: flex; gap: 50px; flex-wrap: wrap; flex: 2; min-width: 280px; }
-        .footer-col h4 { color: #00b4d8; margin: 0 0 12px; font-size: 1rem; }
-        .footer-col p { margin: 5px 0; color: #f1f3f5; line-height: 1.55; }
+        footer { background-color: #1d3557; color: #ffffff; padding: 45px 0 0; font-size: 0.9rem; border-top: 4px solid #00b4d8; }
+        .footer-main { padding-bottom: 35px; }
+        .footer-logo-wrap { text-align: center; margin-bottom: 32px; }
+        .footer-logo-container { display: inline-block; width: 150px; max-width: 150px; height: auto; }
+        .footer-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: start; }
+        .footer-col { text-align: justify; text-justify: inter-word; hyphens: auto; }
+        .footer-col h4 { color: #00b4d8; margin: 0 0 14px; font-size: 1rem; text-align: left; }
+        .footer-col p { margin: 6px 0; color: #f1f3f5; line-height: 1.6; }
         .footer-col a { color: #00b4d8; text-decoration: none; }
+        .footer-col a:hover { text-decoration: underline; }
         .medical-disclaimer { text-align: center; font-size: 0.8rem; color: #a8b8c8; margin: 0; padding: 18px 20px; background: rgba(0,0,0,0.15); border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.5; }
         .whatsapp-floating { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 99999; transition: transform 0.2s; }
         .whatsapp-floating:hover { transform: scale(1.1); }
@@ -292,8 +292,8 @@
             .nav-item { margin-left: 0; }
             .nav-menu { justify-content: center; }
             .predictacore-table th, .predictacore-table td { padding: 12px; font-size: 0.9rem; }
-            .footer-main { flex-direction: column; gap: 28px; }
-            .footer-info { flex-direction: column; gap: 24px; }
+            .footer-columns { grid-template-columns: 1fr; gap: 28px; }
+            .footer-logo-container { width: 120px; max-width: 120px; }
         }
     </style>
 </head>
@@ -505,25 +505,24 @@
 
     <footer>
         <div class="container footer-main">
-            <div class="footer-brand">
-                <img class="footer-logo-container" src="/assets/images/OXY-LOGO-02.png" alt="Logo OXYGENGDL" width="90" height="90">
-                <div class="footer-brand-text">
+            <div class="footer-logo-wrap">
+                <img class="footer-logo-container" src="/assets/images/OXY-LOGO-02.png" alt="Logo OXYGENGDL" width="150" height="150">
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
                     <h4>OXYGENGDL</h4>
                     <p>Cámara Hiperbárica · Oxigenoterapia en Guadalajara</p>
                     <p>© 2026 CÁMARA HIPERBÁRICA OXYGENGDL</p>
                 </div>
-            </div>
-            <div class="footer-info">
                 <div class="footer-col">
                     <h4>Dirección</h4>
-                    <p>C. Gral. San Martín 420<br>Col. Americana, Obrera<br>44150 Guadalajara, Jal.</p>
+                    <p>C. Gral. San Martín 420, Col. Americana, Obrera, 44150 Guadalajara, Jalisco, México.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Horarios y contacto</h4>
-                    <p>L-V: 7:30 AM – 8:00 PM</p>
-                    <p>Sáb: 9:00 AM – 2:00 PM</p>
-                    <p><a href="tel:+523328332686">33 2833 2686</a></p>
-                    <p><a href="https://wa.me/523328332686" target="_blank" rel="noopener">WhatsApp</a></p>
+                    <p>Lunes a viernes: 7:30 AM – 8:00 PM. Sábados: 9:00 AM – 2:00 PM.</p>
+                    <p>Teléfono: <a href="tel:+523328332686">33 2833 2686</a></p>
+                    <p><a href="https://wa.me/523328332686" target="_blank" rel="noopener">Agendar por WhatsApp</a></p>
                 </div>
             </div>
         </div>
