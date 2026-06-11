@@ -3,6 +3,7 @@
 *.MOV
 *.mp4
 *.MP4
+!assets/videos/hero-bg.mp4
 *.avi
 *.mkv
 *.dmg

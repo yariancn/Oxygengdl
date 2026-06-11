@@ -213,11 +213,58 @@
         @media (min-width: 769px) {
             .nav-menu { margin-left: auto; }
         }
-        .hero { color: #ffffff; padding: 60px 20px; text-align: center; box-sizing: border-box; }
-        .hero-logo-container { margin: 0 auto 25px; max-width: 460px; display: block; }
-        .hero-logo-container img { width: 100%; height: auto; display: block; }
-        .hero h1 { font-size: 2.8rem; margin: 15px 0; font-weight: 700; letter-spacing: 1.5px; }
-        .hero p { font-size: 1.25rem; max-width: 850px; margin: 0 auto 35px; opacity: 0.95; }
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            padding: 48px 20px 64px;
+            min-height: 420px;
+            overflow: hidden;
+            background-color: #0a2540;
+            box-sizing: border-box;
+        }
+        .hero-media { position: absolute; inset: 0; z-index: 0; }
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(10, 37, 64, 0.42) 0%, rgba(10, 37, 64, 0.78) 100%);
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-logo-float {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+        .hero-logo-float img {
+            width: 96px;
+            max-width: 96px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+        .hero h1 { font-size: clamp(1.85rem, 4vw, 2.8rem); margin: 0 auto 14px; font-weight: 700; letter-spacing: 1.5px; max-width: 720px; }
+        .hero-inner > p { font-size: clamp(1rem, 1.2vw, 1.25rem); max-width: 720px; margin: 0 auto 35px; opacity: 0.95; line-height: 1.6; }
         .hero-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; font-weight: bold; font-size: 1rem; text-decoration: none; border-radius: 8px; border: none; transition: transform 0.2s, background-color 0.2s; }
         .cta-wa-hero { background-color: #e9ecef; color: #495057; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
@@ -303,9 +350,13 @@
             .nav-item { margin-left: 0; flex: 1; text-align: center; }
             .nav-link { font-size: 0.78rem; display: block; padding: 4px 2px; }
             .info-block { flex-direction: column; gap: 25px; }
-            .hero { padding: 40px 16px; }
+            .hero { padding: 36px 16px 48px; min-height: 360px; }
+            .hero-logo-float { top: 12px; right: 12px; }
+            .hero-logo-float img { width: 72px; max-width: 72px; }
             .hero h1 { font-size: 1.85rem; }
-            .hero p { font-size: 1.05rem; }
+            .hero-inner > p { font-size: 1.05rem; }
+            .hero-video { display: none; }
+            .hero-overlay { background: #0a2540; }
             .hero-buttons { flex-direction: column; align-items: stretch; gap: 12px; max-width: 320px; margin: 0 auto; }
             .cta-button { width: 100%; box-sizing: border-box; }
             .predictacore-table th, .predictacore-table td { padding: 12px; font-size: 0.9rem; }
@@ -337,14 +388,22 @@
 
     <main>
         <section id="inicio" class="hero">
-            <div class="hero-logo-container">
-                <img src="/assets/images/OXY-LOGO-02.png" alt="OXYGENGDL - Oxigenoterapia Hiperbárica en Guadalajara" width="460" height="200">
+            <div class="hero-media" aria-hidden="true">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/images/instalacion-clinica-segura.jpg">
+                    <source src="/assets/videos/hero-bg.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
             </div>
-            <h1>CÁMARA HIPERBÁRICA</h1>
-            <p>Oxigenoterapia de precisión diseñada para actuar como soporte celular avanzado y optimizar los tiempos de recuperación biológica.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/523328332686?text=Hola,%20me%20interesa%20información%20sobre%20la%20cámara%20hiperbárica." class="cta-button cta-wa-hero" target="_blank" rel="noopener">WhatsApp</a>
-                <a href="https://wa.me/523328332686?text=Hola,%20quiero%20reservar%20una%20cita%20para%20oxigenoterapia." class="cta-button cta-agenda-hero" target="_blank" rel="noopener">Reservar Cita</a>
+            <div class="hero-logo-float">
+                <img src="/assets/images/OXY-LOGO_Mesa-de-trabajo-1.png" alt="OXYGENGDL" width="96" height="36" loading="eager">
+            </div>
+            <div class="hero-inner">
+                <h1>CÁMARA HIPERBÁRICA</h1>
+                <p>Oxigenoterapia de precisión diseñada para actuar como soporte celular avanzado y optimizar los tiempos de recuperación biológica.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/523328332686?text=Hola,%20me%20interesa%20información%20sobre%20la%20cámara%20hiperbárica." class="cta-button cta-wa-hero" target="_blank" rel="noopener">WhatsApp</a>
+                    <a href="https://wa.me/523328332686?text=Hola,%20quiero%20reservar%20una%20cita%20para%20oxigenoterapia." class="cta-button cta-agenda-hero" target="_blank" rel="noopener">Reservar Cita</a>
+                </div>
             </div>
         </section>
 
