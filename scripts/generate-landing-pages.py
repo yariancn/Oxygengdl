@@ -64,12 +64,12 @@ CSS = """
 
 ATA_NOTICE = """
         <div class="notice">
-            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). Cada esquema se define con valoración individual previa.</p>
+            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). La valoración se realiza en tu <strong>primera cita</strong>.</p>
         </div>"""
 
 HARCH_NOTICE = """
         <div class="notice notice-harch">
-            <p><strong>Referencia clínica — <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a>:</strong> En condiciones neurológicas, el diseño de nuestros protocolos toma como referencia las recomendaciones publicadas por el <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación de oxigenoterapia hiperbárica en lesión neurológica crónica. La literatura publicada enfatiza presiones en el rango de <strong>baja a media presión</strong> (habitualmente <strong>1.3–1.5 ATA</strong> en esquemas descritos), con evaluación periódica de respuesta y ajuste de dosis. En pacientes con antecedente de convulsiones, la literatura publicada sugiere iniciar a presiones más bajas y titular con observación clínica cuidadosa. La presión controlada se considera una variable terapéutica relevante en estos contextos.</p>
+            <p><strong>Referencia clínica:</strong> En condiciones neurológicas, nuestros protocolos toman como referencia las recomendaciones publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación en lesión neurológica crónica, con presiones habituales de baja a media presión (1.3–1.5 ATA) y evaluación periódica de respuesta.</p>
         </div>"""
 
 PREP_FAQ = """
@@ -108,7 +108,13 @@ PREP_FAQ = """
             </div>
         </div>"""
 
-MEDICAL_DISCLAIMER = "La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico ni seguimiento profesional. Certificación IBUM y permiso COFEPRIS."
+MEDICAL_DISCLAIMER = "La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico ni seguimiento profesional. Certificación IBUM."
+
+NAV_BUTTONS = """
+        <p style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="/" class="btn-home-main">← Regresar a página principal</a>
+            <a href="/camaras-hiperbaricas/" class="btn-home-main">Tratamientos</a>
+        </p>"""
 
 TREATMENTS = [
     {
@@ -128,7 +134,7 @@ TREATMENTS = [
             ]),
             ("Protocolo en OXYGENGDL", [
                 "Presión controlada hasta 2.0 ATA.",
-                "Duración y número de sesiones definidos según valoración individual.",
+                "Duración y número de sesiones definidos en tu primera cita.",
                 "Seguimiento de evolución en cada sesión.",
             ]),
         ],
@@ -141,7 +147,7 @@ TREATMENTS = [
         "slug": "autismo",
         "title": "Cámara Hiperbárica para Autismo en Guadalajara | OXYGENGDL",
         "h1": "Oxigenoterapia Hiperbárica como Apoyo en Autismo",
-        "description": "Soporte complementario con protocolos de baja a media presión hasta 2.0 ATA, alineados a recomendaciones publicadas del Dr. Harch. Guadalajara.",
+        "description": "Soporte complementario con protocolos de baja a media presión hasta 2.0 ATA en Guadalajara. OXYGENGDL.",
         "image": "/assets/images/IMAGEN-AUTISMO.jpg",
         "image_alt": "Oxigenoterapia complementaria para autismo en Guadalajara",
         "neurological": True,
@@ -153,24 +159,25 @@ TREATMENTS = [
                 "Priorizar seguridad, titulación gradual y observación clínica en cada sesión.",
             ]),
             ("Protocolo neurológico", [
-                "Presiones habituales en rango 1.3–1.5 ATA según referencia publicada del Dr. Harch.",
+                "Presiones habituales en rango 1.3–1.5 ATA.",
                 "Esquemas modulares con evaluación periódica de respuesta.",
                 "Participación de padres o tutores en consentimiento informado y seguimiento.",
             ]),
         ],
         "faq": [
             ("¿Es un tratamiento curativo para autismo?", "No. Es un apoyo complementario que puede integrarse a un plan terapéutico integral."),
-            ("¿Qué presión se utiliza?", "Protocolos con presión controlada hasta 2.0 ATA, habitualmente en rangos de baja a media presión según valoración individual."),
+            ("¿Qué presión se utiliza?", "Protocolos con presión controlada hasta 2.0 ATA, habitualmente en rangos de baja a media presión."),
         ],
     },
     {
         "slug": "recuperacion-postoperatoria",
         "title": "Cámara Hiperbárica Postoperatoria en Guadalajara | OXYGENGDL",
         "h1": "Recuperación Postoperatoria con Oxigenoterapia Hiperbárica",
-        "description": "Apoyo en cicatrización y recuperación post-cirugía con cámara hiperbárica hasta 2.0 ATA en Guadalajara. Certificación IBUM y COFEPRIS.",
+        "description": "Apoyo en cicatrización y recuperación post-cirugía con cámara hiperbárica hasta 2.0 ATA en Guadalajara. Certificación IBUM.",
         "image": "/assets/images/IMAGEN-CIRUGIA.jpg",
         "image_alt": "Oxigenoterapia hiperbárica para recuperación postoperatoria en Guadalajara",
         "neurological": False,
+        "hide_ata": True,
         "intro": "La oxigenoterapia hiperbárica puede actuar como coadyuvante en postoperatorios estéticos, reconstructivos y ortopédicos, apoyando la desinflamación tisular y la cicatrización bajo protocolos de presión controlada.",
         "sections": [
             ("Beneficios de apoyo", [
@@ -180,20 +187,20 @@ TREATMENTS = [
             ]),
             ("Protocolo en OXYGENGDL", [
                 "Presión controlada hasta 2.0 ATA según tipo de cirugía y tiempo de evolución.",
-                "Valoración previa para descartar contraindicaciones.",
+                "La valoración se realiza en tu primera cita.",
                 "Esquemas personalizados según evolución del paciente.",
             ]),
         ],
         "faq": [
-            ("¿Cuándo puedo iniciar después de cirugía?", "Depende del procedimiento y del tiempo de evolución. Realizamos valoración previa en tu primera visita."),
-            ("¿Cuántas sesiones se recomiendan?", "Varía según el caso. Se define en valoración individual; ofrecemos paquetes de 5, 10 y 20 sesiones."),
+            ("¿Cuándo puedo iniciar después de cirugía?", "Depende del procedimiento y del tiempo de evolución. En tu primera cita realizamos la valoración."),
+            ("¿Cuántas sesiones se recomiendan?", "Varía según el caso. Se define en tu primera cita; ofrecemos paquetes de 5, 10 y 20 sesiones."),
         ],
     },
     {
         "slug": "paralisis-cerebral",
         "title": "Cámara Hiperbárica para Parálisis Cerebral Infantil | Guadalajara",
         "h1": "Soporte Hiperbárico en Parálisis Cerebral Infantil",
-        "description": "Oxigenoterapia hiperbárica complementaria con protocolos de baja a media presión hasta 2.0 ATA, referencia Dr. Harch. OXYGENGDL Guadalajara.",
+        "description": "Oxigenoterapia hiperbárica complementaria con protocolos de baja a media presión hasta 2.0 ATA. OXYGENGDL Guadalajara.",
         "image": "/assets/images/IMAGEN-PARALISIS-CEREBRAL.jpg",
         "image_alt": "Soporte hiperbárico en parálisis cerebral infantil en Guadalajara",
         "neurological": True,
@@ -205,7 +212,7 @@ TREATMENTS = [
                 "Trabajo coordinado con padres y equipo terapéutico del menor.",
             ]),
             ("Protocolo neurológico", [
-                "Presiones en rango 1.3–1.5 ATA según referencia publicada del Dr. Harch.",
+                "Presiones en rango 1.3–1.5 ATA.",
                 "Titulación cuidadosa; en antecedente de convulsiones, inicio a presión más baja con observación.",
                 "Evaluación periódica de respuesta y ajuste de esquema.",
             ]),
@@ -219,7 +226,7 @@ TREATMENTS = [
         "slug": "evento-cerebrovascular",
         "title": "Cámara Hiperbárica tras Evento Cerebrovascular | Guadalajara",
         "h1": "Apoyo Hiperbárico tras Evento Cerebrovascular",
-        "description": "Oxigenoterapia complementaria en rehabilitación neuro-motriz con protocolos hasta 2.0 ATA, referencia publicada Dr. Harch. OXYGENGDL.",
+        "description": "Oxigenoterapia complementaria en rehabilitación neuro-motriz con protocolos hasta 2.0 ATA. OXYGENGDL.",
         "image": "/assets/images/IMAGEN-STROKE.jpg",
         "image_alt": "Rehabilitación con cámara hiperbárica tras evento cerebrovascular",
         "neurological": True,
@@ -231,14 +238,14 @@ TREATMENTS = [
                 "Acompañar el proceso de recuperación funcional.",
             ]),
             ("Protocolo neurológico", [
-                "Esquemas con presión controlada hasta 2.0 ATA; rangos habituales 1.3–1.5 ATA según Dr. Harch.",
+                "Esquemas con presión controlada hasta 2.0 ATA; rangos habituales 1.3–1.5 ATA.",
                 "Cursos modulares con evaluación de respuesta entre bloques de sesiones.",
                 "Ajuste de presión ante signos de sensibilidad o según evolución.",
             ]),
         ],
         "faq": [
-            ("¿Cuándo se puede iniciar?", "Tras valoración previa y estabilización clínica del paciente."),
-            ("¿Cuántas sesiones?", "La literatura publicada del Dr. Harch describe cursos modulares (p. ej. bloques de 40 sesiones con evaluación intermedia); el esquema se personaliza."),
+            ("¿Cuándo se puede iniciar?", "Tras estabilización clínica; la valoración se realiza en tu primera cita."),
+            ("¿Cuántas sesiones?", "Cursos modulares con evaluación intermedia; el esquema se personaliza en tu primera cita."),
         ],
     },
     {
@@ -258,7 +265,7 @@ TREATMENTS = [
             ]),
             ("Protocolo en OXYGENGDL", [
                 "Presión controlada hasta 2.0 ATA, definida según tolerancia individual.",
-                "Sesiones programadas en paquetes de 5, 10 o 20 según valoración.",
+                "Sesiones programadas en paquetes de 5, 10 o 20 según tu primera valoración.",
             ]),
         ],
         "faq": [
@@ -282,8 +289,8 @@ TREATMENTS = [
                 "Buscar espaciar la frecuencia de episodios dolorosos.",
             ]),
             ("Protocolo", [
-                "Presión controlada hasta 2.0 ATA; rangos terapéuticos personalizados según valoración.",
-                "Referencia a principios de dosificación publicados en contextos neurológicos (Dr. Harch).",
+                "Presión controlada hasta 2.0 ATA; rangos terapéuticos personalizados.",
+                "Esquemas modulares con evaluación periódica de respuesta.",
             ]),
         ],
         "faq": [
@@ -320,7 +327,7 @@ TREATMENTS = [
         "slug": "procesos-oncologicos",
         "title": "Cámara Hiperbárica en Procesos Oncológicos | Guadalajara",
         "h1": "Oxigenoterapia Hiperbárica como Apoyo en Procesos Oncológicos",
-        "description": "Soporte complementario en procesos oncológicos con cámara hiperbárica hasta 2.0 ATA. OXYGENGDL Guadalajara, COFEPRIS.",
+        "description": "Soporte complementario en procesos oncológicos con cámara hiperbárica hasta 2.0 ATA. OXYGENGDL Guadalajara.",
         "image": "/assets/images/IMAGEN-CANCER.jpg",
         "image_alt": "Soporte complementario de oxigenoterapia en procesos oncológicos",
         "neurological": False,
@@ -328,16 +335,16 @@ TREATMENTS = [
         "sections": [
             ("Enfoque integral", [
                 "Apoyo complementario, nunca sustituto de oncología convencional.",
-                "Presión controlada hasta 2.0 ATA según valoración y fase de tratamiento.",
+                "Presión controlada hasta 2.0 ATA según fase de tratamiento.",
                 "Seguimiento de tolerancia en cada sesión.",
             ]),
             ("Protocolo en OXYGENGDL", [
-                "Valoración previa detallada.",
+                "La valoración se realiza en tu primera cita.",
                 "Esquemas modulares con seguimiento de tolerancia.",
             ]),
         ],
         "faq": [
-            ("¿Puede recibir quien está en quimioterapia?", "Se valora caso por caso en la valoración previa en OXYGENGDL."),
+            ("¿Puede recibir quien está en quimioterapia?", "Se valora caso por caso en tu primera cita en OXYGENGDL."),
             ("¿Cura el cáncer?", "No. Es un apoyo complementario dentro de un plan oncológico integral."),
         ],
     },
@@ -355,9 +362,9 @@ def render_page(t: dict) -> str:
     faq_html = ""
     for q, a in t["faq"]:
         faq_html += f'<div class="notice"><p><strong>{q}</strong><br>{a}</p></div>\n'
-    faq_html += PREP_FAQ
 
     neuro_block = HARCH_NOTICE if t["neurological"] else ""
+    ata_block = "" if t.get("hide_ata") else ATA_NOTICE
 
     schema = f"""    <script type="application/ld+json">
     {{
@@ -402,7 +409,7 @@ def render_page(t: dict) -> str:
                 <img src="/assets/images/OXY-LOGO_Mesa-de-trabajo-1.png" alt="OXYGENGDL" width="160" height="52">
             </a>
             <nav class="nav-links" aria-label="Secciones">
-                <a href="/camaras-hiperbaricas/">Indicaciones</a>
+                <a href="/camaras-hiperbaricas/">Tratamientos</a>
                 <a href="/#costos">Precios</a>
                 <a href="/#ubicacion">Ubicación</a>
             </nav>
@@ -411,22 +418,20 @@ def render_page(t: dict) -> str:
     </header>
 
     <main class="page-wrap">
-        <p class="breadcrumb"><a href="/">Inicio</a> · <a href="/camaras-hiperbaricas/">Cámaras hiperbáricas</a> · {t['h1']}</p>
+        <p class="breadcrumb"><a href="/">Inicio</a> · <a href="/camaras-hiperbaricas/">Tratamientos</a> · {t['h1']}</p>
         <img class="hero-img" src="{t['image']}" alt="{t['image_alt']}" width="860" height="320" loading="eager">
         <h1>{t['h1']}</h1>
-        <p class="lead">{t['intro']} · <strong>Guadalajara, Jalisco</strong> · Certificación IBUM · Permiso COFEPRIS</p>
-{ATA_NOTICE}
+        <p class="lead">{t['intro']} · <strong>Guadalajara, Jalisco</strong> · Certificación IBUM</p>
+{ata_block}
 {neuro_block}
         {sections_html}
         <h2>Preguntas frecuentes</h2>
         {faq_html}
         <div class="cta-box">
-            <p><strong>Agenda tu valoración en OXYGENGDL</strong><br>C. Gral. San Martín 420, Col. Americana, Guadalajara · Tel. <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
+            <p><strong>Agenda tu cita en OXYGENGDL</strong><br>La valoración se realiza en tu primera sesión.<br>C. Gral. San Martín 420, Col. Americana, Guadalajara · Tel. <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
             <a href="https://wa.me/523328332686?text=Hola,%20quiero%20información%20sobre%20{wa_text}" target="_blank" rel="noopener">Agendar por WhatsApp</a>
         </div>
-        <p style="text-align:center;margin-top:24px;">
-            <a href="/" class="btn-home-main">← Regresar a página principal</a>
-        </p>
+{NAV_BUTTONS}
     </main>
 
     <footer>
@@ -457,12 +462,12 @@ def render_harch_page() -> str:
     <header class="site-header">
         <div class="nav-container">
             <a href="/" class="logo-nav"><img src="/assets/images/OXY-LOGO_Mesa-de-trabajo-1.png" alt="OXYGENGDL" width="160" height="52"></a>
-            <nav class="nav-links"><a href="/camaras-hiperbaricas/">Indicaciones</a><a href="/">Inicio</a></nav>
+            <nav class="nav-links"><a href="/camaras-hiperbaricas/">Tratamientos</a><a href="/">Inicio</a></nav>
             <a class="btn-wa" href="https://wa.me/523328332686" target="_blank" rel="noopener">WhatsApp</a>
         </div>
     </header>
     <main class="page-wrap">
-        <p class="breadcrumb"><a href="/">Inicio</a> · <a href="/camaras-hiperbaricas/">Cámaras hiperbáricas</a> · Dr. Paul Harch</p>
+        <p class="breadcrumb"><a href="/">Inicio</a> · <a href="/camaras-hiperbaricas/">Tratamientos</a> · Dr. Paul Harch</p>
         <h1>Dr. Paul Harch y nuestros protocolos neurológicos</h1>
         <p class="lead">Referencia clínica para condiciones neurológicas en OXYGENGDL · Guadalajara, Jalisco</p>
 
@@ -491,9 +496,8 @@ def render_harch_page() -> str:
             <li><a href="/camaras-hiperbaricas/migrana/">Migraña crónica</a></li>
         </ul>
 
-        <p style="text-align:center;margin-top:32px;">
-            <a href="/camaras-hiperbaricas/" class="btn-home-main">Ver todas las indicaciones</a>
-            &nbsp;
+        <p style="text-align:center;margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="/camaras-hiperbaricas/" class="btn-home-main">Tratamientos</a>
             <a href="/" class="btn-home-main">← Regresar a página principal</a>
         </p>
     </main>
@@ -544,20 +548,20 @@ def render_hub() -> str:
         </div>
     </header>
     <main class="page-wrap">
-        <p class="breadcrumb"><a href="/">Inicio</a> · Cámaras hiperbáricas</p>
+        <p class="breadcrumb"><a href="/">Inicio</a> · Tratamientos</p>
         <h1>Cámara Hiperbárica en Guadalajara</h1>
-        <p class="lead">Oxigenoterapia hiperbárica con presión controlada <strong>hasta 2.0 ATA</strong>. Certificación IBUM · Permiso COFEPRIS · C. Gral. San Martín 420, Col. Americana.</p>
+        <p class="lead">Oxigenoterapia hiperbárica con presión controlada <strong>hasta 2.0 ATA</strong>. Certificación IBUM · C. Gral. San Martín 420, Col. Americana.</p>
 {ATA_NOTICE}
-        <p>Explore nuestras indicaciones de apoyo complementario. En condiciones neurológicas, los protocolos siguen referencias publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación, con presiones habituales de baja a media presión.</p>
+        <p>Explore nuestros tratamientos de apoyo complementario. En condiciones neurológicas, los protocolos siguen referencias publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación, con presiones habituales de baja a media presión.</p>
         <div class="hub-grid">
 {cards}        </div>
+        <h2>Preguntas frecuentes</h2>
+{PREP_FAQ}
         <div class="cta-box">
-            <p><strong>¿No encuentra su indicación?</strong> Escríbanos por WhatsApp al <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
+            <p><strong>¿No encuentra su tratamiento?</strong> Escríbanos por WhatsApp al <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
             <a href="https://wa.me/523328332686" target="_blank" rel="noopener">Contactar</a>
         </div>
-        <p style="text-align:center;margin-top:24px;">
-            <a href="/" class="btn-home-main">← Regresar a página principal</a>
-        </p>
+{NAV_BUTTONS}
     </main>
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
