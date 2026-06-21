@@ -45,18 +45,19 @@
         h1 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 10px; }
         .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 24px; }
         h2 { color: var(--navy); font-size: 1.15rem; margin: 28px 0 10px; }
+        h3 { color: var(--navy); font-size: 1rem; margin: 18px 0 8px; }
         p, li { font-size: 0.95rem; }
         ul { padding-left: 1.25rem; margin: 0 0 14px; }
         li { margin-bottom: 6px; }
         .notice { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--cyan); padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
         .notice strong { color: var(--navy); }
         .notice-harch { border-left-color: #1d3557; }
+        .prep-box { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin: 16px 0; }
         .cta-box { background: var(--navy); color: var(--white); padding: 28px; border-radius: 12px; text-align: center; margin: 32px 0; }
         .cta-box a { display: inline-block; margin-top: 12px; padding: 12px 28px; background: var(--cyan); color: var(--white); border-radius: 8px; font-weight: 700; text-decoration: none; }
         .cta-box a:hover { opacity: 0.9; }
-        .related { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
-        .related a { display: block; padding: 12px 14px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-        .related a:hover { border-color: var(--cyan); }
+        .btn-home-main { display: inline-flex; align-items: center; padding: 12px 24px; background: var(--white); color: var(--navy); border: 2px solid var(--navy); border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 8px; }
+        .btn-home-main:hover { background: var(--navy); color: var(--white); }
         footer { background: var(--navy); color: #f1f3f5; padding: 24px 20px; font-size: 0.85rem; text-align: center; border-top: 4px solid var(--cyan); }
         footer a { color: var(--cyan); }
         .disclaimer { font-size: 0.8rem; color: #a8b8c8; margin-top: 12px; }
@@ -84,9 +85,9 @@
         <p class="lead">Oxigenoterapia hiperbárica con presión controlada <strong>hasta 2.0 ATA</strong>. Certificación IBUM · Permiso COFEPRIS · C. Gral. San Martín 420, Col. Americana.</p>
 
         <div class="notice">
-            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). Los protocolos que aplicamos en OXYGENGDL <strong>no superan este límite</strong>. Cada esquema se define con valoración individual previa.</p>
+            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). Cada esquema se define con valoración individual previa.</p>
         </div>
-        <p>Explore nuestras indicaciones de apoyo complementario. En condiciones neurológicas, los protocolos siguen referencias publicadas del <strong>Dr. Paul Harch</strong> sobre dosificación, con presiones habituales de baja a media presión sin exceder 2.0 ATA.</p>
+        <p>Explore nuestras indicaciones de apoyo complementario. En condiciones neurológicas, los protocolos siguen referencias publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación, con presiones habituales de baja a media presión.</p>
         <div class="hub-grid">
             <a class="card" href="/camaras-hiperbaricas/diabetes/">
                 <img src="/assets/images/IMAGEN-DIABETES.jpg" alt="Oxigenoterapia hiperbárica para diabetes y pie diabético en Guadalajara" width="400" height="180" loading="lazy">
@@ -126,13 +127,16 @@
             </a>
         </div>
         <div class="cta-box">
-            <p><strong>¿No encuentra su indicación?</strong> Escríbanos por WhatsApp al 33 2833 2686.</p>
+            <p><strong>¿No encuentra su indicación?</strong> Escríbanos por WhatsApp al <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
             <a href="https://wa.me/523328332686" target="_blank" rel="noopener">Contactar</a>
         </div>
+        <p style="text-align:center;margin-top:24px;">
+            <a href="/" class="btn-home-main">← Regresar a página principal</a>
+        </p>
     </main>
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
-        <p class="disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico, indicación ni seguimiento médico profesional. Certificación IBUM y permiso COFEPRIS.</p>
+        <p class="disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico ni seguimiento profesional. Certificación IBUM y permiso COFEPRIS.</p>
     </footer>
 </body>
 </html>

@@ -65,18 +65,19 @@
         h1 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 10px; }
         .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 24px; }
         h2 { color: var(--navy); font-size: 1.15rem; margin: 28px 0 10px; }
+        h3 { color: var(--navy); font-size: 1rem; margin: 18px 0 8px; }
         p, li { font-size: 0.95rem; }
         ul { padding-left: 1.25rem; margin: 0 0 14px; }
         li { margin-bottom: 6px; }
         .notice { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--cyan); padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
         .notice strong { color: var(--navy); }
         .notice-harch { border-left-color: #1d3557; }
+        .prep-box { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin: 16px 0; }
         .cta-box { background: var(--navy); color: var(--white); padding: 28px; border-radius: 12px; text-align: center; margin: 32px 0; }
         .cta-box a { display: inline-block; margin-top: 12px; padding: 12px 28px; background: var(--cyan); color: var(--white); border-radius: 8px; font-weight: 700; text-decoration: none; }
         .cta-box a:hover { opacity: 0.9; }
-        .related { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
-        .related a { display: block; padding: 12px 14px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
-        .related a:hover { border-color: var(--cyan); }
+        .btn-home-main { display: inline-flex; align-items: center; padding: 12px 24px; background: var(--white); color: var(--navy); border: 2px solid var(--navy); border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 8px; }
+        .btn-home-main:hover { background: var(--navy); color: var(--white); }
         footer { background: var(--navy); color: #f1f3f5; padding: 24px 20px; font-size: 0.85rem; text-align: center; border-top: 4px solid var(--cyan); }
         footer a { color: var(--cyan); }
         .disclaimer { font-size: 0.8rem; color: #a8b8c8; margin-top: 12px; }
@@ -105,27 +106,62 @@
         <p class="lead">Atletas y personas activas pueden beneficiarse de la oxigenoterapia hiperbárica como apoyo en la recuperación de músculos, tendones y ligamentos, con protocolos de presión controlada hasta 2.0 ATA. · <strong>Guadalajara, Jalisco</strong> · Certificación IBUM · Permiso COFEPRIS</p>
 
         <div class="notice">
-            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). Los protocolos que aplicamos en OXYGENGDL <strong>no superan este límite</strong>. Cada esquema se define con valoración individual previa.</p>
+            <p><strong>Presión de operación:</strong> Nuestras cámaras hiperbáricas operan con presión controlada <strong>hasta 2.0 ATA</strong> (atmosferas absolutas). Cada esquema se define con valoración individual previa.</p>
         </div>
 
-        <h2>Apoyo en recuperación</h2><ul><li>Favorecer oxigenación de tejidos tras esfuerzo intenso o lesión.</li><li>Complementar fisioterapia y reposo indicados.</li><li>Apoyar retorno gradual al entrenamiento.</li></ul>
+        <h2>Apoyo en recuperación</h2><ul><li>Favorecer oxigenación de tejidos tras esfuerzo intenso o lesión.</li><li>Complementar fisioterapia y reposo.</li><li>Apoyar retorno gradual al entrenamiento.</li></ul>
 <h2>Protocolo en OXYGENGDL</h2><ul><li>Presión controlada hasta 2.0 ATA según tipo de lesión y fase de recuperación.</li><li>Paquetes de 5, 10 y 20 sesiones disponibles.</li></ul>
 
         <h2>Preguntas frecuentes</h2>
         <div class="notice"><p><strong>¿Es solo para deportistas profesionales?</strong><br>No. Cualquier persona con lesión deportiva o sobreuso puede valorarse para apoyo complementario.</p></div>
-<div class="notice"><p><strong>¿Cuánto antes de volver a entrenar?</strong><br>Depende de la lesión y criterio médico; la hiperbaria es un complemento, no un atajo.</p></div>
+<div class="notice"><p><strong>¿Cuánto antes de volver a entrenar?</strong><br>Depende de la lesión y la evolución; la hiperbaria es un complemento, no un atajo.</p></div>
 
+        <div class="notice">
+            <p><strong>¿Cómo debo prepararme para mi cita?</strong></p>
+            <div class="prep-box">
+                <p>¡Hola! Gracias por reservar con OXYGENGDL. 🫧</p>
+                <p>Para garantizar tu seguridad y la efectividad de tu tratamiento, por favor lee las siguientes indicaciones antes de tu sesión de Cámara Hiperbárica:</p>
+                <h3>🚫 Restricciones importantes</h3>
+                <ul>
+                    <li><strong>Sustancias:</strong> No consumir alcohol ni drogas 8 horas antes.</li>
+                    <li><strong>Tabaco:</strong> No fumar 24 h antes ni después de la sesión.</li>
+                    <li><strong>Vuelos:</strong> No volar 24 h antes ni después de la sesión.</li>
+                    <li><strong>Salud:</strong> No ingresar con fiebre o infección respiratoria. (Pacientes con historial de neumotórax, barotrauma o implantes electrónicos no compatibles no podrán ingresar).</li>
+                </ul>
+                <h3>👕 Vestimenta e higiene</h3>
+                <ul>
+                    <li>Venir bien aseado, sin cremas, perfumes ni lociones.</li>
+                    <li>Usar ropa cómoda (de preferencia pants).</li>
+                    <li>Uñas limpias, cortas y sin esmalte fresco.</li>
+                    <li><strong>Prohibido:</strong> Joyas, relojes, llaves, clips y dispositivos electrónicos.</li>
+                    <li><strong>Ojos:</strong> Usar anteojos si los necesitas; retirar lentes de contacto.</li>
+                </ul>
+                <h3>⏰ Sobre tu cita</h3>
+                <ul>
+                    <li><strong>Primera vez:</strong> Llegar 30 minutos antes para valoración e inducción.</li>
+                    <li><strong>Identificación:</strong> Presentar identificación vigente en tu primera sesión.</li>
+                    <li><strong>Puntualidad:</strong> Si llegas tarde, se descontará el tiempo de tu sesión.</li>
+                    <li><strong>Cancelaciones:</strong> Cambios o cancelaciones con 24 h de anticipación, o la sesión se dará por tomada.</li>
+                </ul>
+                <h3>📍 Ubicación</h3>
+                <p>General San Martín #420 (Esq. José Guadalupe Montenegro), Guadalajara.<br>
+                <a href="https://maps.app.goo.gl/zaU4FmQpDf6b9rnD8" target="_blank" rel="noopener">Ver en Google Maps</a></p>
+                <h3>📞 Contacto directo</h3>
+                <p>Cualquier programación o dudas: <a href="tel:+523321664083">33 2166 4083</a></p>
+            </div>
+        </div>
         <div class="cta-box">
-            <p><strong>Agenda tu valoración en OXYGENGDL</strong><br>C. Gral. San Martín 420, Col. Americana, Guadalajara · Tel. 33 2833 2686</p>
+            <p><strong>Agenda tu valoración en OXYGENGDL</strong><br>C. Gral. San Martín 420, Col. Americana, Guadalajara · Tel. <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
             <a href="https://wa.me/523328332686?text=Hola,%20quiero%20información%20sobre%20Recuperación%20Deportiva%20con%20Oxigenoterapia%20Hiperbáric" target="_blank" rel="noopener">Agendar por WhatsApp</a>
         </div>
-        <h2>Otras indicaciones</h2>
-        <div class="related"><a href="/camaras-hiperbaricas/diabetes/">Oxigenoterapia Hiperbárica</a><a href="/camaras-hiperbaricas/autismo/">Oxigenoterapia Hiperbárica como Apoyo en</a><a href="/camaras-hiperbaricas/recuperacion-postoperatoria/">Recuperación Postoperatoria</a><a href="/camaras-hiperbaricas/paralisis-cerebral/">Soporte Hiperbárico en Parálisis Cerebra</a><a href="/camaras-hiperbaricas/evento-cerebrovascular/">Apoyo Hiperbárico tras Evento Cerebrovas</a><a href="/camaras-hiperbaricas/fibromialgia/">Oxigenoterapia Hiperbárica</a></div>
+        <p style="text-align:center;margin-top:24px;">
+            <a href="/" class="btn-home-main">← Regresar a página principal</a>
+        </p>
     </main>
 
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a> · <a href="/terminos-y-condiciones/">Términos</a></p>
-        <p class="disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico, indicación ni seguimiento médico profesional. Certificación IBUM y permiso COFEPRIS.</p>
+        <p class="disclaimer">La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico ni seguimiento profesional. Certificación IBUM y permiso COFEPRIS.</p>
     </footer>
 </body>
 </html>
