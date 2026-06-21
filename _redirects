@@ -10,8 +10,12 @@
 /oxyhyperbaric/terms/ /oxyhyperbaric/terms-and-conditions/ 301
 /terminos /terminos-y-condiciones/ 301
 /terminos/ /terminos-y-condiciones/ 301
-/terapia-hiperbarica /#tratamientos 301
-/terapia-hiperbarica-y-paralisis-cerebral /#tratamientos 301
-/indicaciones /#tratamientos 301
-/diabetes /#tratamientos 301
+/terapia-hiperbarica /camaras-hiperbaricas/ 301
+/terapia-hiperbarica/ /camaras-hiperbaricas/ 301
+/terapia-hiperbarica-y-paralisis-cerebral /camaras-hiperbaricas/paralisis-cerebral/ 301
+/terapia-hiperbarica-y-paralisis-cerebral/ /camaras-hiperbaricas/paralisis-cerebral/ 301
+/indicaciones /camaras-hiperbaricas/ 301
+/indicaciones/ /camaras-hiperbaricas/ 301
+/diabetes /camaras-hiperbaricas/diabetes/ 301
+/diabetes/ /camaras-hiperbaricas/diabetes/ 301
 /about-me /#inicio 301

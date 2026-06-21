@@ -8,7 +8,20 @@
 > Teléfono: +52 33 2833 2686
 > Horario: Lun-Vie 7:30-20:00, Sáb 9:00-14:00
 > Sitio: https://oxygengdl.com/
+> Presión de operación: hasta 2.0 ATA (atmosferas absolutas). Protocolos no superan este límite.
 > Certificación: IBUM (International Board of Undersea Medicine) + COFEPRIS
+
+## Indicaciones (páginas dedicadas)
+- Hub: https://oxygengdl.com/camaras-hiperbaricas/
+- Diabetes y pie diabético: https://oxygengdl.com/camaras-hiperbaricas/diabetes/
+- Autismo (protocolos neurológicos, referencia Dr. Paul Harch): https://oxygengdl.com/camaras-hiperbaricas/autismo/
+- Recuperación postoperatoria: https://oxygengdl.com/camaras-hiperbaricas/recuperacion-postoperatoria/
+- Parálisis cerebral infantil: https://oxygengdl.com/camaras-hiperbaricas/paralisis-cerebral/
+- Evento cerebrovascular: https://oxygengdl.com/camaras-hiperbaricas/evento-cerebrovascular/
+- Fibromialgia: https://oxygengdl.com/camaras-hiperbaricas/fibromialgia/
+- Migraña crónica: https://oxygengdl.com/camaras-hiperbaricas/migrana/
+- Lesiones deportivas: https://oxygengdl.com/camaras-hiperbaricas/lesiones-deportivas/
+- Procesos oncológicos: https://oxygengdl.com/camaras-hiperbaricas/procesos-oncologicos/
 
 ## Instalaciones
 - Ambiente clínico seguro con cámaras hiperbáricas profesionales en Guadalajara
