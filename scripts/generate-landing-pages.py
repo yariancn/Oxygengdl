@@ -72,41 +72,39 @@ HARCH_NOTICE = """
             <p><strong>Referencia clínica:</strong> En condiciones neurológicas, nuestros protocolos toman como referencia las recomendaciones publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación en lesión neurológica crónica, con presiones habituales de baja a media presión (1.3–1.5 ATA) y evaluación periódica de respuesta.</p>
         </div>"""
 
-PREP_FAQ = """
-        <div class="notice">
-            <p><strong>¿Cómo debo prepararme para mi cita?</strong></p>
-            <div class="prep-box">
-                <p>¡Hola! Gracias por reservar con OXYGENGDL. 🫧</p>
-                <p>Para garantizar tu seguridad y la efectividad de tu tratamiento, por favor lee las siguientes indicaciones antes de tu sesión de Cámara Hiperbárica:</p>
-                <h3>🚫 Restricciones importantes</h3>
-                <ul>
-                    <li><strong>Sustancias:</strong> No consumir alcohol ni drogas 8 horas antes.</li>
-                    <li><strong>Tabaco:</strong> No fumar 24 h antes ni después de la sesión.</li>
-                    <li><strong>Vuelos:</strong> No volar 24 h antes ni después de la sesión.</li>
-                    <li><strong>Salud:</strong> No ingresar con fiebre o infección respiratoria. (Pacientes con historial de neumotórax, barotrauma o implantes electrónicos no compatibles no podrán ingresar).</li>
-                </ul>
-                <h3>👕 Vestimenta e higiene</h3>
-                <ul>
-                    <li>Venir bien aseado, sin cremas, perfumes ni lociones.</li>
-                    <li>Usar ropa cómoda (de preferencia pants).</li>
-                    <li>Uñas limpias, cortas y sin esmalte fresco.</li>
-                    <li><strong>Prohibido:</strong> Joyas, relojes, llaves, clips y dispositivos electrónicos.</li>
-                    <li><strong>Ojos:</strong> Usar anteojos si los necesitas; retirar lentes de contacto.</li>
-                </ul>
-                <h3>⏰ Sobre tu cita</h3>
-                <ul>
-                    <li><strong>Primera vez:</strong> Llegar 30 minutos antes para valoración e inducción.</li>
-                    <li><strong>Identificación:</strong> Presentar identificación vigente en tu primera sesión.</li>
-                    <li><strong>Puntualidad:</strong> Si llegas tarde, se descontará el tiempo de tu sesión.</li>
-                    <li><strong>Cancelaciones:</strong> Cambios o cancelaciones con 24 h de anticipación, o la sesión se dará por tomada.</li>
-                </ul>
-                <h3>📍 Ubicación</h3>
-                <p>General San Martín #420 (Esq. José Guadalupe Montenegro), Guadalajara.<br>
-                <a href="https://maps.app.goo.gl/zaU4FmQpDf6b9rnD8" target="_blank" rel="noopener">Ver en Google Maps</a></p>
-                <h3>📞 Contacto directo</h3>
-                <p>Cualquier programación o dudas: <a href="tel:+523321664083">33 2166 4083</a></p>
-            </div>
-        </div>"""
+PREP_PAGE_BODY = """
+        <p>¡Hola! Gracias por reservar con OXYGENGDL. 🫧</p>
+        <p>Para garantizar tu seguridad y la efectividad de tu tratamiento, por favor lee las siguientes indicaciones antes de tu sesión de Cámara Hiperbárica:</p>
+        <h2>🚫 Restricciones importantes</h2>
+        <ul>
+            <li><strong>Sustancias:</strong> No consumir alcohol ni drogas 8 horas antes.</li>
+            <li><strong>Tabaco:</strong> No fumar 24 h antes ni después de la sesión.</li>
+            <li><strong>Vuelos:</strong> No volar 24 h antes ni después de la sesión.</li>
+            <li><strong>Salud:</strong> No ingresar con fiebre o infección respiratoria. (Pacientes con historial de neumotórax, barotrauma o implantes electrónicos no compatibles no podrán ingresar).</li>
+        </ul>
+        <h2>👕 Vestimenta e higiene</h2>
+        <ul>
+            <li>Venir bien aseado, sin cremas, perfumes ni lociones.</li>
+            <li>Usar ropa cómoda (de preferencia pants).</li>
+            <li>Uñas limpias, cortas y sin esmalte fresco.</li>
+            <li><strong>Prohibido:</strong> Joyas, relojes, llaves, clips y dispositivos electrónicos.</li>
+            <li><strong>Ojos:</strong> Usar anteojos si los necesitas; retirar lentes de contacto.</li>
+        </ul>
+        <h2>⏰ Sobre tu cita</h2>
+        <ul>
+            <li><strong>Primera vez:</strong> Llegar 30 minutos antes para valoración e inducción.</li>
+            <li><strong>Identificación:</strong> Presentar identificación vigente en tu primera sesión.</li>
+            <li><strong>Puntualidad:</strong> Si llegas tarde, se descontará el tiempo de tu sesión.</li>
+            <li><strong>Cancelaciones:</strong> Cambios o cancelaciones con 24 h de anticipación, o la sesión se dará por tomada.</li>
+        </ul>
+        <h2>📍 Ubicación</h2>
+        <p>General San Martín #420 (Esq. José Guadalupe Montenegro), Guadalajara.<br>
+        <a href="https://maps.app.goo.gl/zaU4FmQpDf6b9rnD8" target="_blank" rel="noopener">Ver en Google Maps</a></p>
+        <h2>📞 Contacto directo</h2>
+        <p>Cualquier programación o dudas: <a href="tel:+523321664083">33 2166 4083</a></p>
+        <p style="text-align:center;margin-top:32px;">
+            <a href="/" class="btn-home-main">← Regresar a página principal</a>
+        </p>"""
 
 MEDICAL_DISCLAIMER = "La oxigenoterapia hiperbárica es un tratamiento de apoyo complementario. No sustituye diagnóstico ni seguimiento profesional. Certificación IBUM."
 
@@ -510,6 +508,42 @@ def render_harch_page() -> str:
 """
 
 
+def render_prep_page() -> str:
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{PIXEL}
+    <title>Indicaciones para tu sesión | OXYGENGDL — Guadalajara</title>
+    <meta name="description" content="Indicaciones para asistir a tu sesión de cámara hiperbárica en OXYGENGDL: restricciones, vestimenta, puntualidad, ubicación y contacto.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://oxygengdl.com/indicaciones-para-sesiones/">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <style>{CSS}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="/" class="logo-nav"><img src="/assets/images/OXY-LOGO_Mesa-de-trabajo-1.png" alt="OXYGENGDL" width="160" height="52"></a>
+            <a href="/" class="btn-wa">Inicio</a>
+        </div>
+    </header>
+    <main class="page-wrap">
+        <h1>Indicaciones para tu sesión</h1>
+        <p class="lead">OXYGENGDL · Cámara Hiperbárica · Guadalajara, Jalisco</p>
+{PREP_PAGE_BODY}
+    </main>
+    <footer>
+        <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
+        <p class="disclaimer">{MEDICAL_DISCLAIMER}</p>
+    </footer>
+</body>
+</html>
+"""
+
+
 def render_hub() -> str:
     cards = ""
     for t in TREATMENTS:
@@ -555,8 +589,6 @@ def render_hub() -> str:
         <p>Explore nuestros tratamientos de apoyo complementario. En condiciones neurológicas, los protocolos siguen referencias publicadas del <a href="/camaras-hiperbaricas/dr-paul-harch/">Dr. Paul Harch</a> sobre dosificación, con presiones habituales de baja a media presión.</p>
         <div class="hub-grid">
 {cards}        </div>
-        <h2>Preguntas frecuentes</h2>
-{PREP_FAQ}
         <div class="cta-box">
             <p><strong>¿No encuentra su tratamiento?</strong> Escríbanos por WhatsApp al <a href="tel:+523321664083" style="color:#fff">33 2166 4083</a></p>
             <a href="https://wa.me/523328332686" target="_blank" rel="noopener">Contactar</a>
@@ -575,6 +607,9 @@ def render_hub() -> str:
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "index.html").write_text(render_hub(), encoding="utf-8")
+    prep_dir = ROOT / "indicaciones-para-sesiones"
+    prep_dir.mkdir(parents=True, exist_ok=True)
+    (prep_dir / "index.html").write_text(render_prep_page(), encoding="utf-8")
     harch_dir = OUT / "dr-paul-harch"
     harch_dir.mkdir(parents=True, exist_ok=True)
     (harch_dir / "index.html").write_text(render_harch_page(), encoding="utf-8")
@@ -582,7 +617,7 @@ def main():
         d = OUT / t["slug"]
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(render_page(t), encoding="utf-8")
-    print(f"Generated hub + Harch page + {len(TREATMENTS)} landing pages in {OUT}")
+    print(f"Generated hub + prep page + Harch page + {len(TREATMENTS)} landing pages")
 
 
 if __name__ == "__main__":
