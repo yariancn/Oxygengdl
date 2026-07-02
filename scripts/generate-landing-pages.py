@@ -60,7 +60,10 @@ CSS = """
         footer { background: var(--navy); color: #f1f3f5; padding: 24px 20px; font-size: 0.85rem; text-align: center; border-top: 4px solid var(--cyan); }
         footer a { color: var(--cyan); }
         .disclaimer { font-size: 0.8rem; color: #a8b8c8; margin-top: 12px; }
+        .social-links { margin: 10px 0 0; }
 """
+
+SOCIAL_LINKS = """        <p class="social-links"><a href="https://www.facebook.com/oxygengdl" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.instagram.com/oxygengdl" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@oxygengdl" target="_blank" rel="noopener noreferrer">TikTok</a></p>"""
 
 ATA_NOTICE = """
         <div class="notice">
@@ -434,6 +437,7 @@ def render_page(t: dict) -> str:
 
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a> · <a href="/terminos-y-condiciones/">Términos</a></p>
+{SOCIAL_LINKS}
         <p class="disclaimer">{MEDICAL_DISCLAIMER}</p>
     </footer>
 </body>
@@ -501,6 +505,7 @@ def render_harch_page() -> str:
     </main>
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
+{SOCIAL_LINKS}
         <p class="disclaimer">{MEDICAL_DISCLAIMER}</p>
     </footer>
 </body>
@@ -537,6 +542,7 @@ def render_prep_page() -> str:
     </main>
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
+{SOCIAL_LINKS}
         <p class="disclaimer">{MEDICAL_DISCLAIMER}</p>
     </footer>
 </body>
@@ -597,6 +603,7 @@ def render_hub() -> str:
     </main>
     <footer>
         <p><a href="/">oxygengdl.com</a> · <a href="/politica-de-privacidad/">Aviso de Privacidad</a></p>
+{SOCIAL_LINKS}
         <p class="disclaimer">{MEDICAL_DISCLAIMER}</p>
     </footer>
 </body>
