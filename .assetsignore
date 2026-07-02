@@ -1,0 +1,7 @@
+.git
+.gitignore
+.wrangler
+scripts
+DEPLOY.md
+compress-images.sh
+prepare-images.sh

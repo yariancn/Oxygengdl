@@ -1,11 +1,30 @@
 # OXYGENGDL — Deploy y SEO completo
 
-## Cloudflare Pages
+## Deploy automático
 
-1. https://dash.cloudflare.com → Workers & Pages → proyecto **Oxygengdl**
-2. Repo: **yariancn/Oxygengdl**, branch **main**
-3. Build command: *(vacío)* | Output: **/**
-4. Custom domains: `oxygengdl.com` y `www.oxygengdl.com`
+Proyecto activo: **oxygengdl** (Cloudflare Worker)  
+Dominio: `oxygengdl.com` y `www.oxygengdl.com`  
+Repo: **yariancn/Oxygengdl** · branch **main**
+
+Cada `git push` a `main` dispara **GitHub Actions** (`.github/workflows/deploy.yml`) que ejecuta `npx wrangler deploy`.
+
+Requisitos en el repo:
+- `wrangler.jsonc` en la raíz (nombre del Worker: `oxygengdl`)
+- `.assetsignore` para no subir `.git` ni scripts al deploy
+
+### Secretos requeridos en GitHub (una sola vez)
+
+En https://github.com/yariancn/Oxygengdl/settings/secrets/actions:
+
+| Secreto | Valor |
+|---------|-------|
+| `CLOUDFLARE_API_TOKEN` | Token de API con permiso **Workers Scripts → Edit** ([crear aquí](https://dash.cloudflare.com/profile/api-tokens)) |
+
+### Deploy manual (solo emergencia)
+
+```bash
+npx wrangler deploy
+```
 
 ---
 
